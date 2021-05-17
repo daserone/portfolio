@@ -30,6 +30,9 @@ ul{
 a{
   text-decoration: none;
 }
+h1{
+  color: #7018f6;
+}
 img{
   width: 100%;
 }

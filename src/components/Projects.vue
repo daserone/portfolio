@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .portfolio-container img{
   border-radius: 1em;
   margin-bottom:2em ;

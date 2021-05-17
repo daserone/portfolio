@@ -7,7 +7,8 @@
       @before-enter='beforeSingle'
       @enter='enterSingle'
       >
-      <router-link to="/"><img src="../assets/logo.png" alt="" class="logo" /></router-link>
+      <span class="no-class"> <router-link to="/"><img src="../assets/logo.png" alt="" class="logo" /></router-link></span>
+     
       
       </transition>
       
@@ -107,7 +108,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .nav-container,.footer-container{
   background: #181818;
   
@@ -122,7 +123,13 @@ header{
   align-items: center;
   padding:0 1em;
 }
-
+.no-class  .router-link-exact-active{
+   border: none;
+ }
+ .router-link-exact-active{
+   border: 1px solid #7018F6;
+   border-radius: 5px;
+ }
 header .logo{
   height: 100px;
   width: 150px;
@@ -167,6 +174,9 @@ header  ul a{
   .social-header ul li a i{
     color: black;
     margin: 10px;
+  }
+  .admin i {
+    color: #7018F6;
   }
 }
 

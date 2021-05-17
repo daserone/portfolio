@@ -1,9 +1,12 @@
 <template>
    <section class="skills">
     <div class="skills-container">
-      <div class="skills-details">
-        <h1 class="skills-title">Skills</h1>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="skills-details"  v-for="{id,title,description} in skills" :key="id" >
+        <div class="dada" v-if="skills.length">
+                <h1 class="skills-title">{{title}}</h1>
+        <p>{{description}}</p>
+        </div>
+  
       </div>
       <div class="container">
         <div class="content" ref='content'></div>
@@ -16,8 +19,10 @@
 <script>
 import TagCloud from 'TagCloud';
 import { onMounted } from 'vue';
+import {getSkills} from '../main'
 export default {
  setup(){
+   const skills = getSkills()
     const myTags = [
       'JavaScript', 'CSS', 'HTML',
       'Angular', 'VUE',
@@ -46,14 +51,15 @@ export default {
       });
     });
     
-
+  return { skills }
   }
 }
 </script>
 
-<style>
+<style >
 .skills{
-  height: 61vh;
+  height: 82vh;
+  padding: 0;
 }
 .skill-title{
   font-weight: bold;

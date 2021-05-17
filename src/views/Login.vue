@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .login{
     display: flex;
     justify-content: center;
@@ -70,13 +70,14 @@ export default {
   .login h2{
     color: #7018F6;
     font-size: 3em;
+    text-align: center;
   }
   form{
     display: flex;
     flex-direction: column;
     width: 400px;
     background-color: white;
-    padding: 3em;
+    padding: 1em;
     border-radius: 10px;
   }
   form input{

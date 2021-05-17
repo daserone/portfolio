@@ -8,8 +8,7 @@
       <h1 key='keyName1'>Daniel Ramírez,</h1>
       <h1 key='keyName2'>Front end Web Developer</h1>
       <div class="meet" key='keyName3'>
-        <span><i class="fas fa-angle-double-down"></i></span>
-        <p>Know more</p>
+        <button> <router-link to="/contact">Hire me</router-link> </button>
       </div>
       
     </transition-group>
@@ -62,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hero{
   background-color: #252525;
   color: whitesmoke;
@@ -101,6 +100,10 @@ export default {
   .hero .content h1{
     font-size: 3em;
     line-height: 1.2em;
+    color: whitesmoke;
+  }
+  .hero .content a{
+    color: whitesmoke;
   }
   .meet{
     margin: unset;
@@ -122,5 +125,11 @@ export default {
     flex-direction: column;
   }
 }
-
+button{
+    border: none;
+    background-color: #7018F6;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;}
 </style>

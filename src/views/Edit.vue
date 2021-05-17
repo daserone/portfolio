@@ -20,7 +20,7 @@
           <label>Img</label>
           <input @change="handleImage" type="file" accept="image/*" />
           <progress id="progress" :value="img.uploadValue" max="100"></progress>
-          <div >
+          <div>
             <img class="preview" :src="img.picture" />
           </div>
         </div>
@@ -32,8 +32,8 @@
 
 <script>
 import { computed, onMounted, reactive } from "vue";
-import { useRoute,useRouter } from "vue-router";
-import { getProject,updateProject } from "../main";
+import { useRoute, useRouter } from "vue-router";
+import { getProject, updateProject } from "../main";
 import firebase from "firebase";
 
 export default {
@@ -57,12 +57,6 @@ export default {
       img.picture = project.img;
     });
     const update = async () => {
-      /*  await updateProject(projectId.value,{...form})
-      router.push('/admin')
-      form.title=''
-      form.description=''
-      form.subtitle=''
-      form.img='' */
       img.picture = null;
       const storageRef = firebase
         .storage()
@@ -106,5 +100,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.edit-page{
+  display: flex;
+  justify-content: center;
+}
 </style>
